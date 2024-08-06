@@ -7,8 +7,8 @@ def load_system_instruction(file_path):
     with open(file_path, "r", encoding="utf-8") as f:
         return f.read()
 # --- Google Gemini Setup ---
-os.environ["GEMINI_API_KEY"] = st.secrets['GOOGLE_API_KEY']  
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+#os.environ["GEMINI_API_KEY"] = st.secrets['GOOGLE_API_KEY']  
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 generation_config = {
     "temperature": 1,
